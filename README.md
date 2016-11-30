@@ -21,7 +21,7 @@ SAGE is a very simple JavaScript 2D game engine. It uses HTML5 canvas to render 
 	* Forces, velocity and angular velocity
 * Simple keyboard and mouse input management
 * Simple sound management
-* Basic Networking (see [Sage_Server](TODO))
+* Basic Networking (see [Sage_Server](https://github.com/Armos-Games/Sage-Server))
 
 ## Getting Started
 
@@ -59,24 +59,24 @@ The `data` argument is a JavaScript object containing the informations about thi
 Components are used to change the behaviour of a GameObject. In fact, only adding an empty GameObject to the game won't display or change anything. There are two ways to add a Component to a GameObject.
 
 1. By passing a list of components to the `Instantiate` function:
-	```javascript
-	let go = engine.GameObjects.Instantiate({
-		component1: {
-			property1 : value,
-			property2 : {},
-			property3 : []
-		},
-		component2 : {}
-	});
-	```
+```javascript
+let go = engine.GameObjects.Instantiate({
+	component1: {
+		property1 : value,
+		property2 : {},
+		property3 : []
+	},
+	component2 : {}
+});
+```
 2. With the `AddComponent` function if the GameObject already exists:
-	```javascript
-	go.AddComponent("component1", {
-		"property1" : value,
-		"property2" : {},
-		"property3" : []
-	});
-	```
+```javascript
+go.AddComponent("component1", {
+	"property1" : value,
+	"property2" : {},
+	"property3" : []
+});
+```
 
 These are the default components that you can use that already exist in the engine:
 
@@ -128,7 +128,7 @@ Here is an example of a level:
 
 In this example, the level contains two GameObjects. Both of them have a Transform and a SpriteRenderer Component which will allow the game to display a sprite at their position. Apart from the `gameObjects[]` array, the level also has a `name` tag to give the level a name and a `gravity` tag to  change the gravity vector in the game.
 
-__A complete game template can be found [here](TODO).__ TODO : mettre en évidence
+>A complete game template can be found [here](https://github.com/Armos-Games/Sage/tree/update-readme/template_project).
 
 ## Documentation
 
@@ -136,7 +136,7 @@ The engine's documentation is available [here](TODO)
 
 ## Building yourself
 
-To build the latest version of Sage, you will need [NodeJS](TODO) installed.
+To build the latest version of Sage, you will need [NodeJS](https://nodejs.org) installed.
 
 1. Clone or download this repository to your computer.
 2. Download all the necessary dependencies from NPM by running `npm install` in the repository folder.
