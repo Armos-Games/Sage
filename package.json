@@ -1,0 +1,15 @@
+{
+	"name": "sage",
+	"version": "0.0.2",
+	"dependencies": {
+		"google-closure-compiler-js": "^20161024.0.0",
+		"jsdoc": "^3.4.2",
+		"jsdoc-dash-template": "^2.0.1",
+		"namis": "^1.0.3"
+	},
+	"scripts": {
+		"compile": "node build.js compile",
+		"doc": "node build.js doc",
+		"docset": "node build.js docset"
+	}
+}

@@ -1,0 +1,36 @@
+body {
+	text-align: center;
+	background-color: #3F3F3F;
+}
+
+canvas {
+	background-color: white;
+	width: 1000px;
+	height: 500px;
+	position: fixed;
+	top: 50%;
+	margin-top: -250px;
+	left: 50%;
+	margin-left: -500px;
+	z-index: 1;
+	user-select: none;
+	cursor: default;
+}
+
+button {
+	position: fixed;
+	width: 200px;
+	height: 50px;
+	text-align: center;
+	user-select: none;
+}
+
+#fullscreen {
+	top: 20px;
+	left: 20px;
+}
+
+#gravity {
+	top: 80px;
+	left: 20px;
+}
