@@ -10,11 +10,11 @@ body {
 
 canvas {
 	position: fixed;
-	background-color: white;
 	width: 1000px;
 	height: 500px;
 	top: 50%;
 	margin-top: -250px;
 	left: 50%;
 	margin-left: -500px;
+	background-color: white;
 }
