@@ -70,4 +70,12 @@ class SpriteRenderer extends Component {
 	OnDestroy() {
 		engine.Renderer.$RemoveRenderer(this);
 	}
+
+	/**
+	 * @private
+	 * @memberOf SpriteRenderer
+	 */
+	static get dependencies() {
+		return ["Transform"];
+	}
 }

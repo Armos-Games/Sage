@@ -147,4 +147,11 @@ class MovingElement extends Component {
 		console.error("Tried to add a force that is not a vector");
 	}
 
+	/**
+	 * @private
+	 * @memberOf MovingElement
+	 */
+	static get dependencies() {
+		return ["Transform"];
+	}
 }

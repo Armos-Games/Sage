@@ -63,4 +63,12 @@ class BoxCollider extends Component {
 	OnDestroy() {
 		engine.Physics.$RemoveCollider(this);
 	}
+
+	/**
+	 * @private
+	 * @memberOf BoxCollider
+	 */
+	static get dependencies() {
+		return ["Transform", "MovingElement"];
+	}
 }

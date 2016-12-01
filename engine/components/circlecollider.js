@@ -70,4 +70,12 @@ class CircleCollider extends Component {
 	OnDestroy() {
 		engine.Physics.$RemoveCollider(this);
 	}
+
+	/**
+	 * @private
+	 * @memberOf CircleCollider
+	 */
+	static get dependencies() {
+		return ["Transform", "MovingElement"];
+	}
 }

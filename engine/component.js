@@ -72,4 +72,15 @@ class Component {
 	GetComponent(compName) {
 		return this.gameObject.GetComponent(compName);
 	}
+
+	/**
+	 * Get an array of the Component's dependencies.
+	 *
+	 * @readonly
+	 * @static
+	 * @memberOf Component
+	 */
+	static get dependencies() {
+		return [];
+	}
 }

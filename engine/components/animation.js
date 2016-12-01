@@ -144,4 +144,12 @@ class Animation extends Component {
 	get currentState() {
 		return this._currentState;
 	}
+
+	/**
+	 * @private
+	 * @memberOf Animation
+	 */
+	static get dependencies() {
+		return ["SpriteRenderer"];
+	}
 }

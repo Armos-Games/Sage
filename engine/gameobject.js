@@ -134,6 +134,14 @@ class GameObject {
 			console.error(compName + " is not a valid component. Did you forget to add the link to the Component file?");
 			return;
 		}
+		let self = this;
+		componentType.dependencies.forEach(function (requirement) {
+			if (self._components[requirement] == undefined)
+			{
+				console.log("Adding " + requirement);
+				self.AddComponent(requirement);
+			}
+		});
 		this._components[compName] = new componentType();
 		this._components[compName].gameObject = this;
 		if (data == undefined)
