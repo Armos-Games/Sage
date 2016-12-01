@@ -138,7 +138,7 @@ class GameObject {
 		componentType.dependencies.forEach(function (requirement) {
 			if (self._components[requirement] == undefined)
 			{
-				console.log("Adding " + requirement);
+				console.warn("'" + compName + "' is missing a required '" + requirement + "' Component. Adding one automatically.");
 				self.AddComponent(requirement);
 			}
 		});
