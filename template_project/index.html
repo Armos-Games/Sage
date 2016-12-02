@@ -1,32 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>template_project</title>
+		<meta charset="UTF-8">
 
-		<!--Web Page-->
+		<!-- Include some CSS to place things -->
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 
-		<!-- Engine -->
+		<!-- Include the Sage engine file -->
 		<script type="text/javascript" src="js/sage.min.js"></script>
 
-		<!-- Game scripts -->
+		<!-- Include a script that will start the engine -->
 		<script type="text/javascript" src="js/gameManager.js"></script>
 
-		<!-- Custom Components -->
-		<script type="text/javascript" src="js/components/drag.js"></script>
-		<script type="text/javascript" src="js/components/follow.js"></script>
-		<script type="text/javascript" src="js/components/keyboardcontroller.js"></script>
-
-		<!-- Levels -->
-		<script type="text/javascript" src="js/levels/1.js"></script>
-		<script type="text/javascript" src="js/levels/2.js"></script>
-
-
+		<!-- Include the level(s) that you will want to load -->
+		<script type="text/javascript" src="js/level.js"></script>
 	</head>
-
+	<!-- Call some JavaScript that will start the engine when the page loads -->
 	<body onload="init();">
-
+		<!-- Create a canvas -->
 		<canvas width="1920" height="1080"></canvas>
-
 	</body>
 </html>
