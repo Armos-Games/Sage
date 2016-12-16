@@ -24,7 +24,7 @@ const Minify = function () {
 	let out = compile({
 		jsCode: [{ src: js }]
 	});
-	fs.writeFileSync("build/sage.min.js", out);
+	fs.writeFileSync("build/sage.min.js", out.compiledCode);
 };
 
 const CreateDoc = function () {
