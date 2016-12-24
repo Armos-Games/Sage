@@ -113,7 +113,13 @@ const init = function () {
 			});
 		}
 	}
-
+	level.gameObjects.push({
+		"Transform": {},
+		"SpriteRenderer": {
+			"sprite": "img/circle.png"
+		},
+		"Aim": {}
+	})
 	engine.LoadLevel(level);
 	engine.Camera.size = 10;
 };
