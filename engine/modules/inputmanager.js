@@ -51,6 +51,7 @@ class InputManager {
 	}
 
 	RefreshWorldPosition() {
+		let canvas = this._canvas;
 		let rect = canvas.getBoundingClientRect();
 		let tmpPos = {
 			x: (canvas.width / canvas.scrollWidth) * (this.mouse.screenPosition.x - rect.left),
