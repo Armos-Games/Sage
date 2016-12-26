@@ -16,6 +16,12 @@
 //   SSSSSSSSSSSSSSS AAAAAAA                   AAAAAAA   GGGGGG   GGGGEEEEEEEEEEEEEEEEEEEEEE
 var engine;
 
+/**
+ * The main class which contains all of the engine. It is the class to instantiate to create a new Instance of the
+ * engine.
+ *
+ * @class Engine
+ */
 class Engine {
 	constructor(canvas) {
 		if (engine != undefined)
