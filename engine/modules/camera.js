@@ -28,7 +28,7 @@ class Camera {
 			console.error("A position has to be a Vector.");
 			return;
 		}
-		engine.InputManager.RefreshWorldPosition();
+		engine.InputManager.$RefreshWorldPosition();
 		this._position = value;
 	}
 

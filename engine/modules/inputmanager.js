@@ -50,7 +50,7 @@ class InputManager {
 		});
 	}
 
-	RefreshWorldPosition() {
+	$RefreshWorldPosition() {
 		let canvas = this._canvas;
 		let rect = canvas.getBoundingClientRect();
 		let tmpPos = {
@@ -58,5 +58,9 @@ class InputManager {
 			y: canvas.height - (canvas.height / canvas.scrollHeight) * (this.mouse.screenPosition.y - rect.top)
 		};
 		engine.InputManager.mouse.position = engine.Camera.ScreenToWorldPoint(tmpPos);
+	}
+
+	$Update() {
+		this.mouse.scroll = 0;
 	}
 }
