@@ -34,7 +34,7 @@ class InputManager {
 
 		canvas.addEventListener("mousemove", function (e) {
 			engine.InputManager.mouse.screenPosition = new Vector(e.clientX, e.clientY);
-			engine.InputManager.RefreshWorldPosition();
+			engine.InputManager.$RefreshWorldPosition();
 		});
 
 		canvas.addEventListener("mousedown", function (e) {
