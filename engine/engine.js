@@ -56,6 +56,7 @@ class Engine {
 		engine.Network.$Update();
 		engine.Physics.$Update();
 		engine.Renderer.$Update();
+		engine.InputManager.$Update();
 
 		engine._requestAnimationFrameId = window.requestAnimationFrame(engine._Update, engine._canvas);
 	};

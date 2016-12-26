@@ -15,7 +15,9 @@ class InputManager {
 		this.keysPressed = [];
 		this.mouse = {
 			isDown: false,
-			position: Vector.zero
+			screenPosition: Vector.zero,
+			position: Vector.zero,
+			scroll: 0
 		}
 		this._canvas = canvas;
 
@@ -31,12 +33,8 @@ class InputManager {
 		});
 
 		canvas.addEventListener("mousemove", function (e) {
-			let rect = canvas.getBoundingClientRect();
-			let tmpPos = {
-				x: (canvas.width / canvas.scrollWidth) * (e.clientX - rect.left),
-				y: canvas.height - (canvas.height / canvas.scrollHeight) * (e.clientY - rect.top)
-			};
-			engine.InputManager.mouse.position = engine.Camera.ScreenToWorldPoint(tmpPos);
+			engine.InputManager.mouse.screenPosition = new Vector(e.clientX, e.clientY);
+			engine.InputManager.RefreshWorldPosition();
 		});
 
 		canvas.addEventListener("mousedown", function (e) {
@@ -46,5 +44,23 @@ class InputManager {
 		document.addEventListener("mouseup", function (e) {
 			engine.InputManager.mouse.isDown = false;
 		});
+
+		canvas.addEventListener("mousewheel", function (e) {
+			engine.InputManager.mouse.scroll = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+		});
+	}
+
+	$RefreshWorldPosition() {
+		let canvas = this._canvas;
+		let rect = canvas.getBoundingClientRect();
+		let tmpPos = {
+			x: (canvas.width / canvas.scrollWidth) * (this.mouse.screenPosition.x - rect.left),
+			y: canvas.height - (canvas.height / canvas.scrollHeight) * (this.mouse.screenPosition.y - rect.top)
+		};
+		engine.InputManager.mouse.position = engine.Camera.ScreenToWorldPoint(tmpPos);
+	}
+
+	$Update() {
+		this.mouse.scroll = 0;
 	}
 }

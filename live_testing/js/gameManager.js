@@ -113,7 +113,6 @@ const init = function () {
 			});
 		}
 	}
-
 	engine.LoadLevel(level);
 	engine.Camera.size = 10;
 };

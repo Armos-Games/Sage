@@ -13,9 +13,23 @@ class Camera {
 	 */
 	constructor(canvas) {
 		this.size = 10;
-		this.position = Vector.zero;
+		this._position = Vector.zero;
 		this._screenSize = new Vector(canvas.width, canvas.height);
 		this._ratio = canvas.width / canvas.height;
+	}
+
+
+	get position() {
+		return this._position;
+	}
+	set position(value) {
+		if (Vector.IsVector(value) == false)
+		{
+			console.error("A position has to be a Vector.");
+			return;
+		}
+		engine.InputManager.$RefreshWorldPosition();
+		this._position = value;
 	}
 
 	/**
