@@ -189,6 +189,11 @@ class Physics {
 	 * @memberOf Physics
 	 */
 	_BoxBox(b1, b2) {
+		if (b1.GetComponent("MovingElement").fixed && b2.GetComponent("MovingElement").fixed)
+		{
+			return;
+		}
+
 		let p1 = b1.GetComponent("Transform").position;
 		let p2 = b2.GetComponent("Transform").position;
 		let rect1 = { x: p1.x - b1.width / 2, y: p1.y - b1.height / 2, width: b1.width, height: b1.height }
@@ -326,6 +331,11 @@ class Physics {
 	 * @memberOf Physics
 	 */
 	_CircleBox(circle, box) {
+		if (circle.GetComponent("MovingElement").fixed && box.GetComponent("MovingElement").fixed)
+		{
+			return;
+		}
+
 		let distance = Vector.Subtract(circle.GetComponent("Transform").position, box.GetComponent("Transform").position);
 		let overlapX = (box.width / 2 + circle.radius) - Math.abs(distance.x);
 		let overlapY = (box.height / 2 + circle.radius) - Math.abs(distance.y);
