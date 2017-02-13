@@ -128,7 +128,7 @@ Here is an example of a level:
 
 In this example, the level contains two GameObjects. Both of them have a Transform and a SpriteRenderer Component which will allow the game to display a sprite at their position. Apart from the `gameObjects[]` array, the level also has a `name` tag to give the level a name and a `gravity` tag to  change the gravity vector in the game.
 
->A complete game template can be found [here](https://github.com/Armos-Games/Sage/tree/update-readme/template_project).
+>A complete game template can be found [here](https://github.com/Armos-Games/Sage/tree/master/template_project).
 
 ## Documentation
 
